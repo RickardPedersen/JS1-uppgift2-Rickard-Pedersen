@@ -1,0 +1,15 @@
+.cb {
+    display: none;
+}
+
+#gameArea {
+    margin: auto;
+    width: 35%;
+}
+
+.answer {
+    border: 1px solid black;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+}

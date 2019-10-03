@@ -1,0 +1,351 @@
+{
+    "Sport": [
+   
+            {
+                "fråga": "Vem vann herrarnas fotbolls-VM 2018 ?",
+                "answers" : [
+                    {
+                        "alternativ1": "Frankrike",
+                         "correct": true
+                    },
+                    {
+                        "alternativ2": "Spanien", 
+                        "correct": false
+                    },
+                    {
+                        "alternativ3": "Tyskland",
+                        "correct": false
+                    },
+                    {
+                        "alternativ4": "Brasilien",
+                        "correct": false
+                    }
+                ]
+            },
+            {
+                "fråga": "Vilka 2 fotbollslag spelade i Champions-League finalen 2018?",
+                "answers" : [
+                    {
+                        "alternativ1": "Real Madrid",
+                        "correct" : true
+                    },
+                    {
+                        "alternativ2": "Chelsea", 
+                        "correct" : false
+                    },
+                    {
+                        "alternativ3": "Liverpool",
+                        "correct" : true
+                    },
+                    {
+                        "alternativ4": "AIK",
+                        "correct" : false
+                    }        
+                ]  
+            },
+            {
+                "fråga": "Vad är obligatoriskt att ha på sig under en hockeymatch?",
+                "answers": [
+                    {
+                         "alternativ1": "Hockeyklubba",
+                         "correct" : true
+                    },
+                    {
+                        "alternativ2": "Hjälm", 
+                        "correct" : true
+                    },
+                    {
+                        "alternativ3": "Handledsskydd",
+                        "correct" : false
+                    },
+                    {
+                        "alternativ4": "Tandskydd",
+                        "correct" : true
+                    }
+                ]
+            },
+            {
+                "fråga": "Hur många poäng är en vunnen boll i tennis?",
+                "answers": [
+                    {
+                         "alternativ1": "1",
+                         "correct" : false
+                    },
+                    {
+                        "alternativ2": "5", 
+                        "correct" : false
+                    },
+                    {
+                        "alternativ3": "12",
+                        "correct" : false
+                    },
+                    {
+                        "alternativ4": "15",
+                        "correct" : true
+                    }
+                ]
+            }
+        ],
+    "Teknik": [
+            {
+                "fråga": "Vilka komponenter är vanliga i en dator?",
+                "answers": [
+                    {
+                         "alternativ1": "Grafikkort",
+                         "correct" : true
+                    },
+                    {
+                        "alternativ2": "Processor", 
+                        "correct" : true
+                    },
+                    {
+                        "alternativ3": "Ljudkompressor",
+                        "correct" : false
+                    },
+                    {
+                        "alternativ4": "Ventilationsrör",
+                        "correct" : true
+                    }
+                ]
+             },
+            {
+                 "fråga": "Vilket fordon har blivit väldigt populärt under senaste året?",
+                "answers": [
+                    {
+                         "alternativ1": "El-båt",
+                         "correct" : false
+                    },
+                    {
+                        "alternativ2": "El-skidor", 
+                        "correct" : false
+                    },
+                    {
+                        "alternativ3": "El-Snowboard",
+                        "correct" : false
+                    },
+                    {
+                        "alternativ4": "El-sparkcykel",
+                        "correct" : true
+                    }
+                ]
+             },
+            
+            {
+                "fråga": "Hur många Hz tar en vanlig hdmi-kabel?",
+                "answers": [
+                    {
+                         "alternativ1": "35",
+                         "correct" : false
+                    },
+                    {
+                        "alternativ2": "60", 
+                        "correct" : true
+                    },
+                    {
+                        "alternativ3": "100",
+                        "correct" : false
+                    },
+                    {
+                        "alternativ4": "120",
+                        "correct" : true
+                    }
+                ]
+            },
+            {
+                "fråga": "Vilka grundade företaget Apple?",
+                "answers": [
+                    {
+                         "alternativ1": "Steve Jobs",
+                         "correct" : true
+                    },
+                    {
+                        "alternativ2": "Steve Wozniak",     
+                        "correct" : true
+                    },
+                    {
+                        "alternativ3": "Elon Musk",
+                        "correct" : false
+                    },
+                    {
+                        "alternativ4": "Ronald Wayne",
+                        "correct" : true
+                    }
+                ]
+            }
+    ],
+
+    "Gaming": [
+            {
+               "fråga": "När kom spelet Dark Souls 3 ut?",
+                "answers": [
+                    {
+                         "alternativ1": "2016",
+                         "correct" : true
+                    },
+                    {
+                        "alternativ2": "2017", 
+                        "correct" : false
+                    },
+                    {
+                        "alternativ3": "2015",
+                        "correct" : false
+                    },
+                    {
+                        "alternativ4": "2013",
+                        "correct" : false
+                    }
+                ]
+            },
+            {
+                 "fråga": "Vilka 3 items gör itemet 'Infinity Edge' i spelet League of Legends",
+                "answers": [
+                    {
+                         "alternativ1": "Long Sword",
+                         "correct" : false
+                    },
+                    {
+                        "alternativ2": "BF-Sword", 
+                        "correct" : true
+                    },
+                    {
+                        "alternativ3": "Pick Axe",
+                        "correct" : true
+                    },
+                    {
+                        "alternativ4": "Cloak of Agility",
+                        "correct" : true
+                    }
+                ]
+            },
+            {
+                 "fråga": "Hur många rundor vinner man på i spelet CounterStrike",
+                "answers": [
+                    {
+                         "alternativ1": "13",
+                         "correct" : false
+                    },
+                    {
+                        "alternativ2": "14", 
+                        "correct" : false
+                    },
+                    {
+                        "alternativ3": "20",
+                        "correct" : false
+                    },
+                    {
+                        "alternativ4": "16",
+                        "correct" : true
+                    }
+                ]
+            },
+            {
+                 "fråga": "Vad för genre är spelet Outlast?",
+                "answers": [
+                    {
+                         "alternativ1": "Äventyr",
+                         "correct" : false
+                    },
+                    {
+                        "alternativ2": "Skröck", 
+                        "correct" : true
+                    },
+                    {
+                        "alternativ3": "Skjutspel",
+                        "correct" : false
+                    },
+                    {
+                        "alternativ4": "Musik",
+                        "correct" : false
+                    }
+                ]
+            }
+    ],
+    "Historia": [
+            {
+                "fråga": "Vilket år började 2a världskriget?",
+                "answers": [
+                    {
+                         "alternativ1": "1999",
+                         "correct" : false
+                    },
+                    {
+                        "alternativ2": "1930", 
+                        "correct" : false
+                    },
+                    {
+                        "alternativ3": "1939",
+                        "correct" : true
+                    },
+                    {
+                        "alternativ4": "1920",
+                        "correct" : false
+                    }
+                ]
+            },
+            {
+                "fråga": "När startade gänget 'Peaky Blinders' som blev en följd av 1sta världskriget?",
+                "answers": [
+                    {
+                         "alternativ1": "1921",
+                         "correct" : false
+                    },
+                    {
+                        "alternativ2": "1911", 
+                        "correct" : false
+                    },
+                    {
+                        "alternativ3": "1919",
+                        "correct" : false
+                    },
+                    {
+                        "alternativ4": "1934",
+                        "correct" : true
+                    }
+                ]
+            },
+            {
+                 "fråga": "När började och slutade ",
+                "answers": [
+                    {
+                         "alternativ1": "El-båt",
+                         "correct" : false
+                    },
+                    {
+                        "alternativ2": "El-skidor", 
+                        "correct" : false
+                    },
+                    {
+                        "alternativ3": "El-Snowboard",
+                        "correct" : false
+                    },
+                    {
+                        "alternativ4": "El-sparkcykel",
+                        "correct" : true
+                    }
+                ]
+            },
+            {
+                 "fråga": "Vilket år började 2a världskriget?",
+                "answers": [
+                    {
+                         "alternativ1": "1999",
+                         "correct" : true
+                    },
+                    {
+                        "alternativ2": "El-skidor", 
+                        "correct" : false
+                    },
+                    {
+                        "alternativ3": "El-Snowboard",
+                        "correct" : false
+                    },
+                    {
+                        "alternativ4": "El-sparkcykel",
+                        "correct" : true
+                    }
+                ]
+            }
+    ]
+}
+ 
+

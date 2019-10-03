@@ -15,5 +15,12 @@ class Question {
     }
 }
 
-console.log(Quiz);
-console.log(Question);
+function selectAnswer() {
+    alert("Checked");
+}
+
+document.getElementById("cb1").addEventListener("click", selectAnswer);
+document.getElementById("cb2").addEventListener("click", selectAnswer);
+document.getElementById("cb3").addEventListener("click", selectAnswer);
+document.getElementById("cb4").addEventListener("click", selectAnswer);
+
