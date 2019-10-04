@@ -179,19 +179,19 @@
                "fråga": "När kom spelet Dark Souls 3 ut?",
                 "answers": [
                     {
-                         "alternativ1": "2016",
+                         "alternativ": "2016",
                          "correct" : true
                     },
                     {
-                        "alternativ2": "2017", 
+                        "alternativ": "2017", 
                         "correct" : false
                     },
                     {
-                        "alternativ3": "2015",
+                        "alternativ": "2015",
                         "correct" : false
                     },
                     {
-                        "alternativ4": "2013",
+                        "alternativ": "2013",
                         "correct" : false
                     }
                 ]
@@ -347,5 +347,3 @@
             }
     ]
 }
- 
-

@@ -13,15 +13,17 @@
     <div id="gameArea">
         <h1>Quizspelet</h1>
         <div>
-            <p>Fråga</p>
-            <label class="answer"><input type="checkbox" class="cb" id="cb1">Svar 1</label>
-            <label class="answer"><input type="checkbox" class="cb" id="cb2">Svar 2</label>
-            <label class="answer"><input type="checkbox" class="cb" id="cb3">Svar 3</label>
-            <label class="answer"><input type="checkbox" class="cb" id="cb4">Svar 4</label>
+            <p id="question">Fråga</p>
+            <label class="answer"><input type="checkbox" class="cb" id="cb1"><div id="answer0">Svar 1</div></label>
+            <label class="answer"><input type="checkbox" class="cb" id="cb2"><div id="answer1">Svar 2</div></label>
+            <label class="answer"><input type="checkbox" class="cb" id="cb3"><div id="answer2">Svar 3</div></label>
+            <label class="answer"><input type="checkbox" class="cb" id="cb4"><div id="answer3">Svar 4</div></label>
+            <button id="chooseButton">Välj</button>
         </div>
     </div>
 
 
+    <script src="readjson.js"></script>
     <script src="main.js"></script>
 </body>
 
