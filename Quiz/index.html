@@ -13,26 +13,26 @@
     <div id="gameArea">
         <h1>Quizspelet</h1>
 
-        <div id="startArea">
+        <div id="startArea" class="hidden">
             <p>Välkommen till Quizspelet</p>
             <p>Regler här...</p>
             <button>Spela</button>
         </div>
 
-        <div id="inputArea">
+        <div id="inputArea" class="hidden">
             <p>Namn:</p>
-            <input type="text">
+            <input id="playerName" type="text" placeholder="Ange ditt namn">
             <p>Hur många frågor vill du svara på?</p>
-            <input type="number">
+            <input id="noOfQuestions" type="number">
             <button id="submitInputs">Spela</button>
         </div>
 
         <div id="categoryArea">
             <p>Välj en kategori</p>
-            <label class="categoryChoice"><input type="radio" name="radio">Sport</label>
-            <label class="categoryChoice"><input type="radio" name="radio">Teknik</label>
-            <label class="categoryChoice"><input type="radio" name="radio">Gaming</label>
-            <label class="categoryChoice"><input type="radio" name="radio">Historia</label>
+            <label class="categoryChoice"><input type="radio" name="radio" value="Sport">Sport</label>
+            <label class="categoryChoice"><input type="radio" name="radio" value="Teknik">Teknik</label>
+            <label class="categoryChoice"><input type="radio" name="radio" value="Gaming">Gaming</label>
+            <label class="categoryChoice"><input type="radio" name="radio" value="Historia">Historia</label>
             <button id="submitCategory">Välj</button>
         </div>
 
@@ -46,7 +46,7 @@
             <button id="nextQuestion">Fortsätt</button>
         </div>
 
-        <div id="resultArea">
+        <div id="resultArea" class="hidden">
             <p>Du svarade rätt på x av y frågor!</p>
             <button>Spela igen</button>
             <button>Avsluta</button>

@@ -2,173 +2,173 @@
     "Sport": [
    
             {
-                "fråga": "Vem vann herrarnas fotbolls-VM 2018 ?",
-                "answers" : [
+                "Question": "Vem vann herrarnas fotbolls-VM 2018 ?",
+                "Answers" : [
                     {
-                        "alternativ1": "Frankrike",
-                         "correct": true
+                        "Alternative": "Frankrike",
+                        "Correct": true
                     },
                     {
-                        "alternativ2": "Spanien", 
-                        "correct": false
+                        "Alternative": "Spanien", 
+                        "Correct": false
                     },
                     {
-                        "alternativ3": "Tyskland",
-                        "correct": false
+                        "Alternative": "Tyskland",
+                        "Correct": false
                     },
                     {
-                        "alternativ4": "Brasilien",
-                        "correct": false
+                        "Alternative": "Brasilien",
+                        "Correct": false
                     }
                 ]
             },
             {
-                "fråga": "Vilka 2 fotbollslag spelade i Champions-League finalen 2018?",
-                "answers" : [
+                "Question": "Vilka 2 fotbollslag spelade i Champions-League finalen 2018?",
+                "Answers" : [
                     {
-                        "alternativ1": "Real Madrid",
-                        "correct" : true
+                        "Alternative": "Real Madrid",
+                        "Correct" : true
                     },
                     {
-                        "alternativ2": "Chelsea", 
-                        "correct" : false
+                        "Alternative": "Chelsea", 
+                        "Correct" : false
                     },
                     {
-                        "alternativ3": "Liverpool",
-                        "correct" : true
+                        "Alternative": "Liverpool",
+                        "Correct" : true
                     },
                     {
-                        "alternativ4": "AIK",
-                        "correct" : false
+                        "Alternative": "AIK",
+                        "Correct" : false
                     }        
                 ]  
             },
             {
-                "fråga": "Vad är obligatoriskt att ha på sig under en hockeymatch?",
-                "answers": [
+                "Question": "Vad är obligatoriskt att ha på sig under en hockeymatch?",
+                "Answers": [
                     {
-                         "alternativ1": "Hockeyklubba",
-                         "correct" : true
+                         "Alternative": "Hockeyklubba",
+                         "Correct" : true
                     },
                     {
-                        "alternativ2": "Hjälm", 
-                        "correct" : true
+                        "Alternative": "Hjälm", 
+                        "Correct" : true
                     },
                     {
-                        "alternativ3": "Handledsskydd",
-                        "correct" : false
+                        "Alternative": "Handledsskydd",
+                        "Correct" : false
                     },
                     {
-                        "alternativ4": "Tandskydd",
-                        "correct" : true
+                        "Alternative": "Tandskydd",
+                        "Correct" : true
                     }
                 ]
             },
             {
-                "fråga": "Hur många poäng är en vunnen boll i tennis?",
-                "answers": [
+                "Question": "Hur många poäng är en vunnen boll i tennis?",
+                "Answers": [
                     {
-                         "alternativ1": "1",
-                         "correct" : false
+                         "Alternative": "1",
+                         "Correct" : false
                     },
                     {
-                        "alternativ2": "5", 
-                        "correct" : false
+                        "Alternative": "5", 
+                        "Correct" : false
                     },
                     {
-                        "alternativ3": "12",
-                        "correct" : false
+                        "Alternative": "12",
+                        "Correct" : false
                     },
                     {
-                        "alternativ4": "15",
-                        "correct" : true
+                        "Alternative": "15",
+                        "Correct" : true
                     }
                 ]
             }
         ],
     "Teknik": [
             {
-                "fråga": "Vilka komponenter är vanliga i en dator?",
-                "answers": [
+                "Question": "Vilka komponenter är vanliga i en dator?",
+                "Answers": [
                     {
-                         "alternativ1": "Grafikkort",
-                         "correct" : true
+                         "Alternative": "Grafikkort",
+                         "Correct" : true
                     },
                     {
-                        "alternativ2": "Processor", 
-                        "correct" : true
+                        "Alternative": "Processor", 
+                        "Correct" : true
                     },
                     {
-                        "alternativ3": "Ljudkompressor",
-                        "correct" : false
+                        "Alternative": "Ljudkompressor",
+                        "Correct" : false
                     },
                     {
-                        "alternativ4": "Ventilationsrör",
-                        "correct" : true
+                        "Alternative": "Ventilationsrör",
+                        "Correct" : true
                     }
                 ]
              },
             {
-                 "fråga": "Vilket fordon har blivit väldigt populärt under senaste året?",
-                "answers": [
+                 "Question": "Vilket fordon har blivit väldigt populärt under senaste året?",
+                "Answers": [
                     {
-                         "alternativ1": "El-båt",
-                         "correct" : false
+                         "Alternative": "El-båt",
+                         "Correct" : false
                     },
                     {
-                        "alternativ2": "El-skidor", 
-                        "correct" : false
+                        "Alternative": "El-skidor", 
+                        "Correct" : false
                     },
                     {
-                        "alternativ3": "El-Snowboard",
-                        "correct" : false
+                        "Alternative": "El-Snowboard",
+                        "Correct" : false
                     },
                     {
-                        "alternativ4": "El-sparkcykel",
-                        "correct" : true
+                        "Alternative": "El-sparkcykel",
+                        "Correct" : true
                     }
                 ]
              },
             
             {
-                "fråga": "Hur många Hz tar en vanlig hdmi-kabel?",
-                "answers": [
+                "Question": "Hur många Hz tar en vanlig hdmi-kabel?",
+                "Answers": [
                     {
-                         "alternativ1": "35",
-                         "correct" : false
+                         "Alternative": "35",
+                         "Correct" : false
                     },
                     {
-                        "alternativ2": "60", 
-                        "correct" : true
+                        "Alternative": "60", 
+                        "Correct" : true
                     },
                     {
-                        "alternativ3": "100",
-                        "correct" : false
+                        "Alternative": "100",
+                        "Correct" : false
                     },
                     {
-                        "alternativ4": "120",
-                        "correct" : true
+                        "Alternative": "120",
+                        "Correct" : true
                     }
                 ]
             },
             {
-                "fråga": "Vilka grundade företaget Apple?",
-                "answers": [
+                "Question": "Vilka grundade företaget Apple?",
+                "Answers": [
                     {
-                         "alternativ1": "Steve Jobs",
-                         "correct" : true
+                         "Alternative": "Steve Jobs",
+                         "Correct" : true
                     },
                     {
-                        "alternativ2": "Steve Wozniak",     
-                        "correct" : true
+                        "Alternative": "Steve Wozniak",     
+                        "Correct" : true
                     },
                     {
-                        "alternativ3": "Elon Musk",
-                        "correct" : false
+                        "Alternative": "Elon Musk",
+                        "Correct" : false
                     },
                     {
-                        "alternativ4": "Ronald Wayne",
-                        "correct" : true
+                        "Alternative": "Ronald Wayne",
+                        "Correct" : true
                     }
                 ]
             }
@@ -176,172 +176,172 @@
 
     "Gaming": [
             {
-               "fråga": "När kom spelet Dark Souls 3 ut?",
-                "answers": [
+               "Question": "När kom spelet Dark Souls 3 ut?",
+                "Answers": [
                     {
-                         "alternativ": "2016",
-                         "correct" : true
+                         "Alternative": "2016",
+                         "Correct" : true
                     },
                     {
-                        "alternativ": "2017", 
-                        "correct" : false
+                        "Alternative": "2017", 
+                        "Correct" : false
                     },
                     {
-                        "alternativ": "2015",
-                        "correct" : false
+                        "Alternative": "2015",
+                        "Correct" : false
                     },
                     {
-                        "alternativ": "2013",
-                        "correct" : false
+                        "Alternative": "2013",
+                        "Correct" : false
                     }
                 ]
             },
             {
-                 "fråga": "Vilka 3 items gör itemet 'Infinity Edge' i spelet League of Legends",
-                "answers": [
+                 "Question": "Vilka 3 items gör itemet 'Infinity Edge' i spelet League of Legends",
+                "Answers": [
                     {
-                         "alternativ1": "Long Sword",
-                         "correct" : false
+                         "Alternative": "Long Sword",
+                         "Correct" : false
                     },
                     {
-                        "alternativ2": "BF-Sword", 
-                        "correct" : true
+                        "Alternative": "BF-Sword", 
+                        "Correct" : true
                     },
                     {
-                        "alternativ3": "Pick Axe",
-                        "correct" : true
+                        "Alternative": "Pick Axe",
+                        "Correct" : true
                     },
                     {
-                        "alternativ4": "Cloak of Agility",
-                        "correct" : true
+                        "Alternative": "Cloak of Agility",
+                        "Correct" : true
                     }
                 ]
             },
             {
-                 "fråga": "Hur många rundor vinner man på i spelet CounterStrike",
-                "answers": [
+                 "Question": "Hur många rundor vinner man på i spelet CounterStrike",
+                "Answers": [
                     {
-                         "alternativ1": "13",
-                         "correct" : false
+                         "Alternative": "13",
+                         "Correct" : false
                     },
                     {
-                        "alternativ2": "14", 
-                        "correct" : false
+                        "Alternative": "14", 
+                        "Correct" : false
                     },
                     {
-                        "alternativ3": "20",
-                        "correct" : false
+                        "Alternative": "20",
+                        "Correct" : false
                     },
                     {
-                        "alternativ4": "16",
-                        "correct" : true
+                        "Alternative": "16",
+                        "Correct" : true
                     }
                 ]
             },
             {
-                 "fråga": "Vad för genre är spelet Outlast?",
-                "answers": [
+                 "Question": "Vad för genre är spelet Outlast?",
+                "Answers": [
                     {
-                         "alternativ1": "Äventyr",
-                         "correct" : false
+                         "Alternative": "Äventyr",
+                         "Correct" : false
                     },
                     {
-                        "alternativ2": "Skröck", 
-                        "correct" : true
+                        "Alternative": "Skröck", 
+                        "Correct" : true
                     },
                     {
-                        "alternativ3": "Skjutspel",
-                        "correct" : false
+                        "Alternative": "Skjutspel",
+                        "Correct" : false
                     },
                     {
-                        "alternativ4": "Musik",
-                        "correct" : false
+                        "Alternative": "Musik",
+                        "Correct" : false
                     }
                 ]
             }
     ],
     "Historia": [
             {
-                "fråga": "Vilket år började 2a världskriget?",
-                "answers": [
+                "Question": "Vilket år började 2a världskriget?",
+                "Answers": [
                     {
-                         "alternativ1": "1999",
-                         "correct" : false
+                         "Alternative": "1999",
+                         "Correct" : false
                     },
                     {
-                        "alternativ2": "1930", 
-                        "correct" : false
+                        "Alternative": "1930", 
+                        "Correct" : false
                     },
                     {
-                        "alternativ3": "1939",
-                        "correct" : true
+                        "Alternative": "1939",
+                        "Correct" : true
                     },
                     {
-                        "alternativ4": "1920",
-                        "correct" : false
+                        "Alternative": "1920",
+                        "Correct" : false
                     }
                 ]
             },
             {
-                "fråga": "När startade gänget 'Peaky Blinders' som blev en följd av 1sta världskriget?",
-                "answers": [
+                "Question": "När startade gänget 'Peaky Blinders' som blev en följd av 1sta världskriget?",
+                "Answers": [
                     {
-                         "alternativ1": "1921",
-                         "correct" : false
+                         "Alternative": "1921",
+                         "Correct" : false
                     },
                     {
-                        "alternativ2": "1911", 
-                        "correct" : false
+                        "Alternative": "1911", 
+                        "Correct" : false
                     },
                     {
-                        "alternativ3": "1919",
-                        "correct" : false
+                        "Alternative": "1919",
+                        "Correct" : false
                     },
                     {
-                        "alternativ4": "1934",
-                        "correct" : true
+                        "Alternative": "1934",
+                        "Correct" : true
                     }
                 ]
             },
             {
-                 "fråga": "När började och slutade ",
-                "answers": [
+                 "Question": "När började och slutade ",
+                "Answers": [
                     {
-                         "alternativ1": "El-båt",
-                         "correct" : false
+                         "Alternative": "El-båt",
+                         "Correct" : false
                     },
                     {
-                        "alternativ2": "El-skidor", 
-                        "correct" : false
+                        "Alternative": "El-skidor", 
+                        "Correct" : false
                     },
                     {
-                        "alternativ3": "El-Snowboard",
-                        "correct" : false
+                        "Alternative": "El-Snowboard",
+                        "Correct" : false
                     },
                     {
-                        "alternativ4": "El-sparkcykel",
-                        "correct" : true
+                        "Alternative": "El-sparkcykel",
+                        "Correct" : true
                     }
                 ]
             },
             {
-                 "fråga": "Vilket år började 2a världskriget?",
-                "answers": [
+                 "Question": "Vilket år började 2a världskriget?",
+                "Answers": [
                     {
-                         "alternativ1": "1999",
-                         "correct" : true
+                         "Alternative": "1999",
+                         "Correct" : true
                     },
                     {
-                        "alternativ2": "El-skidor", 
-                        "correct" : false
+                        "Alternative": "El-skidor", 
+                        "Correct" : false
                     },
                     {
-                        "alternativ3": "El-Snowboard",
-                        "correct" : false
+                        "Alternative": "El-Snowboard",
+                        "Correct" : false
                     },
                     {
-                        "alternativ4": "El-sparkcykel",
-                        "correct" : true
+                        "Alternative": "El-sparkcykel",
+                        "Correct" : true
                     }
                 ]
             }

@@ -15,16 +15,16 @@ input[name="radio"] {
     width: 35%;
     background-color: lightblue;
 }
-
+/*
 #startArea {
     display: none;
 }
 
-/*
+
 #inputArea {
     display: none;
 }
-*/
+
 
 #categoryArea {
     display: none;
@@ -35,6 +35,11 @@ input[name="radio"] {
 }
 
 #resultArea {
+    display: none;
+}
+*/
+
+.hidden {
     display: none;
 }
 
