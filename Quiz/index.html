@@ -12,13 +12,44 @@
 <body>
     <div id="gameArea">
         <h1>Quizspelet</h1>
-        <div>
+
+        <div id="startArea">
+            <p>Välkommen till Quizspelet</p>
+            <p>Regler här...</p>
+            <button>Spela</button>
+        </div>
+
+        <div id="inputArea">
+            <p>Namn:</p>
+            <input type="text">
+            <p>Hur många frågor vill du svara på?</p>
+            <input type="number">
+            <button id="submitInputs">Spela</button>
+        </div>
+
+        <div id="categoryArea">
+            <p>Välj en kategori</p>
+            <label class="categoryChoice"><input type="radio" name="radio">Sport</label>
+            <label class="categoryChoice"><input type="radio" name="radio">Teknik</label>
+            <label class="categoryChoice"><input type="radio" name="radio">Gaming</label>
+            <label class="categoryChoice"><input type="radio" name="radio">Historia</label>
+            <button id="submitCategory">Välj</button>
+        </div>
+
+        <div id="questionArea">
             <p id="question">Fråga</p>
-            <label class="answer"><input type="checkbox" class="cb" id="cb1"><div id="answer0">Svar 1</div></label>
-            <label class="answer"><input type="checkbox" class="cb" id="cb2"><div id="answer1">Svar 2</div></label>
-            <label class="answer"><input type="checkbox" class="cb" id="cb3"><div id="answer2">Svar 3</div></label>
-            <label class="answer"><input type="checkbox" class="cb" id="cb4"><div id="answer3">Svar 4</div></label>
-            <button id="chooseButton">Välj</button>
+            <label class="answer"><input type="checkbox" class="checkbox"><div id="answer0">Svar 1</div></label>
+            <label class="answer"><input type="checkbox" class="checkbox"><div id="answer1">Svar 2</div></label>
+            <label class="answer"><input type="checkbox" class="checkbox"><div id="answer2">Svar 3</div></label>
+            <label class="answer"><input type="checkbox" class="checkbox"><div id="answer3">Svar 4</div></label>
+            <button id="submitAnswer">Välj</button>
+            <button id="nextQuestion">Fortsätt</button>
+        </div>
+
+        <div id="resultArea">
+            <p>Du svarade rätt på x av y frågor!</p>
+            <button>Spela igen</button>
+            <button>Avsluta</button>
         </div>
     </div>
 

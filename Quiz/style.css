@@ -1,4 +1,12 @@
-.cb {
+.checkbox {
+    display: none;
+}
+
+input[name="radio"] {
+    display: none;
+}
+
+#nextQuestion {
     display: none;
 }
 
@@ -8,7 +16,31 @@
     background-color: lightblue;
 }
 
-.answer {
+#startArea {
+    display: none;
+}
+
+/*
+#inputArea {
+    display: none;
+}
+*/
+
+#categoryArea {
+    display: none;
+}
+
+#questionArea {
+    display: none;
+}
+
+#resultArea {
+    display: none;
+}
+
+
+
+.answer, .categoryChoice {
     border: 1px solid black;
     border-radius: 10px;
     display: block;

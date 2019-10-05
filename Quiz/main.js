@@ -1,14 +1,14 @@
-// TODO: alreadyAnswerd. kanske i json?
+// TODO: alreadyAnswerd. kanske i json? spara hela det "svarade" objektet i Quiz/Question (array)
 
-window.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', (event) => {
 
 
 class Quiz {
-    constructor(playerName, questions) {
+    constructor(playerName, noOfQuestions) {
         this.playerName = playerName;
-        this.questions = questions;
-        this.correctAnswer = 0;
-        this.wroingAnswer = 0;
+        this.noOfQuestions = noOfQuestions;
+        this.correctAnswers = 0;
+        //this.wroingAnswer = 0;
     }
 }
 
@@ -21,7 +21,6 @@ class Question {
 }
 
 function selectAnswer(event) {
-    console.log(event.currentTarget.parentNode);
     if (event.currentTarget.checked == true) {
         event.currentTarget.parentNode.classList.add("selected");
     } else {
@@ -29,10 +28,14 @@ function selectAnswer(event) {
     }
 }
 
-document.getElementById("cb1").addEventListener("change", selectAnswer);
-document.getElementById("cb2").addEventListener("change", selectAnswer);
-document.getElementById("cb3").addEventListener("change", selectAnswer);
-document.getElementById("cb4").addEventListener("change", selectAnswer);
+for (element of document.getElementsByClassName("checkbox")) {
+    element.addEventListener("change", selectAnswer);
+}
+/*
+document.getElementById("checkbox2").addEventListener("change", selectAnswer);
+document.getElementById("checkbox3").addEventListener("change", selectAnswer);
+document.getElementById("checkbox4").addEventListener("change", selectAnswer);
+*/
 
 
 let json = getJSON('my_data.json');
@@ -44,10 +47,10 @@ for (let i = 0; i < json.Gaming.length ; i++) {
     document.getElementById("answer"+i).innerHTML = json.Gaming[0].answers[i].alternativ;
 }
 
-document.getElementById("chooseButton").addEventListener("click", function (event) {
+document.getElementById("submitAnswer").addEventListener("click", function (event) {
     
-    for (let i = 0; i < document.getElementsByClassName("cb").length; i++) {
-        if (document.getElementsByClassName("cb")[i].checked === json.Gaming[0].answers[i].correct) {
+    for (let i = 0; i < document.getElementsByClassName("checkbox").length; i++) {
+        if (document.getElementsByClassName("checkbox")[i].checked === json.Gaming[0].answers[i].correct) {
             if (i == 3) {
                 alert("rätt");
                 break;
@@ -59,11 +62,10 @@ document.getElementById("chooseButton").addEventListener("click", function (even
     }
     
    
-    //console.log(document.getElementsByClassName("cb")[0].checked)
+    //console.log(document.getElementsByClassName("checkbox")[0].checked)
     //console.log(json.Gaming[0].answers[0].correct)
 })
 
 
 
 });
-
