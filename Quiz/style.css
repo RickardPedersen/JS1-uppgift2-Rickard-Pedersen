@@ -14,7 +14,7 @@ input[name="radio"] {
 #gameArea {
     margin: auto;
     width: 50%;
-    height: 700px;
+    height: 600px;
     background-color: rgb(0, 145, 194);
 }
 
@@ -104,11 +104,11 @@ button {
 
     .answer,
     .categoryChoice {
-        width: 40%;
+        width: 35%;
     }
 
     button {
-        padding: 10%;
+        padding: 5%;
     }
 }
 
@@ -136,7 +136,7 @@ button {
     }
 
     button {
-        padding: 10%;
+        padding: 5%;
     }
 }
 

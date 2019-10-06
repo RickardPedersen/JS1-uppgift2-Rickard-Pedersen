@@ -1,4 +1,3 @@
-// DOMcon... utanför classerna?
 document.addEventListener('DOMContentLoaded', (event) => {
 
     class Quiz {
