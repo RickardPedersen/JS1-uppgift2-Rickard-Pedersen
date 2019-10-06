@@ -11,7 +11,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
             this.currentQuestionNumber = 0;
             this.correctAnswers = 0;
             this.wrongAnswers = 0;
-            this.alreadyAnswered = [];
+            this.sportQuestions = [];
+            this.teknikQuestions = [];
+            this.gamingQuestions = [];
+            this.historiaQuestions = [];
+            this.arrayOfArrays = [this.sportQuestions, this.teknikQuestions, this.gamingQuestions, this.historiaQuestions]
+
+            for (let i = 0; i < json.Sport.length; i++) {
+                this.sportQuestions.push(json.Sport[i]);
+            }
+            for (let i = 0; i < json.Teknik.length; i++) {
+                this.teknikQuestions.push(json.Teknik[i]);
+            }
+            for (let i = 0; i < json.Gaming.length; i++) {
+                this.gamingQuestions.push(json.Gaming[i]);
+            }
+            for (let i = 0; i < json.Historia.length; i++) {
+                this.historiaQuestions.push(json.Historia[i]);
+            }
+
             this.updateStats();
         }
 
@@ -22,78 +40,131 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
 
         //fungerar inte som den ska FIXA
-        checkIfAnswered() {
+        //newQuestion.question-värdet uppdateras inte sen den förra frågan
+        /*
+        checkIfAnswered(questionToBeChecked) {
             for (let i = 0; i < this.alreadyAnswered.length; i++) {
-                if(this.alreadyAnswered[i] == newQuestion.question) {
-                    //this.getQuestion();
+                if (this.alreadyAnswered[i] == questionToBeChecked) {
+                    newQuestion.getQuestion();
                     console.log("denna är redan besvarad");
-                    console.log(this.alreadyAnswered[i]);
-                    console.log(newQuestion.question);
-                    return;
+
+                    //console.log(this.alreadyAnswered[i]);
+                    //console.log(questionToBeChecked);
+
                 }
             }
         }
+        */
     }
 
     class Question {
         constructor() {
             this.category;
+            this.questionArray;
             this.question;
             this.answers;
             this.checkCategoryChoice();
-            this.getQuestion();
+            //this.getQuestion();
+            this.getQuestion2(this.category, this.questionArray);
             this.printQuestion();
-            
+
         }
 
         checkCategoryChoice() {
+            /*
             for (radioButton of radioButtons) {
                 if (radioButton.checked == true) {
                     this.category = radioButton.value;
                 }
             }
+            */
+           for (let i = 0; i < radioButtons.length; i++) {
+            if (radioButtons[i].checked == true) {
+                this.category = radioButtons[i].value;
+                this.questionArray = game.arrayOfArrays[i];
+            }
+        }
         }
 
+        getQuestion2(id, array) {
+            let questionIndex = Math.floor(Math.random() * array.length);
+            
+                    this.question = array[questionIndex].Question;
+                    this.answers = array[questionIndex].Answers;
+                    array.splice(questionIndex, 1);
+
+                    if (array.length == 0) {
+                        document.getElementById(id).disabled = true;
+                        document.getElementById(id).parentNode.classList.add("disabled");
+                    }
+        }
+
+        // används inte längre
+        /*
         getQuestion() {
-            let questionIndex = Math.floor(Math.random() * 4);
+            let questionIndex;
 
             switch (this.category) {
                 case "Sport":
-                    this.question = json.Sport[questionIndex].Question;
-                    game.checkIfAnswered();
-                    game.alreadyAnswered.push(json.Sport[questionIndex].Question);
-                    this.answers = json.Sport[questionIndex].Answers;
+                    questionIndex = Math.floor(Math.random() * game.sportQuestions.length);
+                    this.question = game.sportQuestions[questionIndex].Question;
+                    this.answers = game.sportQuestions[questionIndex].Answers;
+                    game.sportQuestions.splice(questionIndex, 1);
+
+                    if (game.sportQuestions.length == 0) {
+                        document.getElementById("sport").disabled = true;
+                        document.getElementById("sport").parentNode.classList.add("disabled");
+                    }
+                    //game.answeredSport++;
                     break;
 
                 case "Teknik":
-                    this.question = json.Teknik[questionIndex].Question;
-                    game.checkIfAnswered();
-                    game.alreadyAnswered.push(json.Teknik[questionIndex].Question);
-                    this.answers = json.Teknik[questionIndex].Answers;
+                    questionIndex = Math.floor(Math.random() * game.teknikQuestions.length);
+                    this.question = game.teknikQuestions[questionIndex].Question;
+                    this.answers = game.teknikQuestions[questionIndex].Answers;
+                    game.teknikQuestions.splice(questionIndex, 1);
+
+                    if (game.teknikQuestions.length == 0) {
+                        document.getElementById("sport").disabled = true;
+                        document.getElementById("sport").parentNode.classList.add("disabled");
+                    }
+                    ///game.answeredTeknik++;
                     break;
 
                 case "Gaming":
-                    this.question = json.Gaming[questionIndex].Question;
-                    game.checkIfAnswered();
-                    game.alreadyAnswered.push(json.Gaming[questionIndex].Question);
-                    this.answers = json.Gaming[questionIndex].Answers;
-                    this
+                    questionIndex = Math.floor(Math.random() * game.sportQuestions.length);
+                    this.question = game.sportQuestions[questionIndex].Question;
+                    this.answers = game.sportQuestions[questionIndex].Answers;
+                    game.sportQuestions.splice(questionIndex, 1);
+
+                    if (game.sportQuestions.length == 0) {
+                        document.getElementById("sport").disabled = true;
+                        document.getElementById("sport").parentNode.classList.add("disabled");
+                    }
+                    //game.answeredGaming++;
                     break;
 
                 case "Historia":
-                    this.question = json.Historia[questionIndex].Question;
-                    game.checkIfAnswered();
-                    game.alreadyAnswered.push(json.Historia[questionIndex].Question);
-                    this.answers = json.Historia[questionIndex].Answers;
+                    questionIndex = Math.floor(Math.random() * game.sportQuestions.length);
+                    this.question = game.sportQuestions[questionIndex].Question;
+                    this.answers = game.sportQuestions[questionIndex].Answers;
+                    game.sportQuestions.splice(questionIndex, 1);
+
+                    if (game.sportQuestions.length == 0) {
+                        document.getElementById("sport").disabled = true;
+                        document.getElementById("sport").parentNode.classList.add("disabled");
+                    }
+                    //game.answeredHistoria++;
                     break;
 
                 default:
                     break;
             }
-
             
 
+
         }
+        */
 
         // This method prints out the question and answers
         printQuestion() {
@@ -118,7 +189,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     alert("fel");
                     break;
                 }
-                
+
             }
         }
 
@@ -140,7 +211,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
 
         reset() {
-            
+
             for (let i = 0; i < checkboxes.length; i++) {
                 checkboxes[i].checked = false;
                 checkboxes[i].parentNode.classList.remove("selected", "correct", "wrong");
@@ -208,7 +279,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     //game = new Quiz("Rickard", 5);
     document.getElementById("submitInputs").addEventListener("click", function (event) {
         game = new Quiz(document.getElementById("playerName").value, parseInt(document.getElementById("noOfQuestions").value));
-        
+
         console.log(game);
         document.getElementById("inputArea").classList.add("hidden");
         document.getElementById("categoryArea").classList.remove("hidden");
@@ -244,10 +315,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById("resultText").innerHTML = "Du svarade rätt på " + game.correctAnswers + " av " + game.noOfQuestions + " frågor!";
         } else {
             //newQuestion = new Question();
+            /*
+            if (game.answeredSport == json.Sport.length) {
+                document.getElementById("sport").disabled = true;
+            }
+            if (game.answeredSport == json.Sport.length) {
+                document.getElementById("teknik").disabled = true;
+            }
+            if (game.answeredSport == json.Sport.length) {
+                document.getElementById("gaming").disabled = true;
+            }
+            if (game.answeredSport == json.Sport.length) {
+                document.getElementById("historia").disabled = true;
+            }
+
+            */
             document.getElementById("categoryArea").classList.remove("hidden");
+
         }
     });
 
-
+    //document.getElementById("sport").disabled = true;
 
 });

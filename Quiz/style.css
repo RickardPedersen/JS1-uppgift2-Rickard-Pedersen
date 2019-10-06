@@ -12,6 +12,11 @@ input[name="radio"] {
     width: 35%;
     background-color: lightblue;
 }
+
+.disabled {
+    text-decoration: line-through;
+    color: grey;
+}
 /*
 #startArea {
     display: none;
