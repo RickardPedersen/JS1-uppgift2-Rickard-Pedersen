@@ -6,9 +6,6 @@ input[name="radio"] {
     display: none;
 }
 
-#nextQuestion {
-    display: none;
-}
 
 #gameArea {
     margin: auto;
@@ -60,4 +57,26 @@ input[name="radio"] {
     display: block;
     margin: 10px;
     padding: 15px;
+}
+
+.wrong {
+    background-color: red;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: block;
+    margin: 10px;
+    padding: 15px;
+}
+
+.correct {
+    background-color: green;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: block;
+    margin: 10px;
+    padding: 15px;
+}
+
+.yourAnswer {
+    float: right;
 }
