@@ -215,7 +215,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 document.getElementById("stats").classList.remove("hidden");
                 game.currentQuestionNumber++;
                 game.updateStats();
-                console.log(newQuestion);
                 document.getElementById("categoryArea").classList.add("hidden");
                 document.getElementById("questionArea").classList.remove("hidden");
             } else if (i == radioButtons.length - 1) {
