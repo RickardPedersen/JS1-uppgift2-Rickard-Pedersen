@@ -11,57 +11,74 @@
 
 <body>
     <div id="gameArea">
-        <h1>Quizspelet</h1>
+        <h1 id="title">Quizspelet</h1>
+
         <div id="stats" class="hidden">
             <p id="questionNumber">Fråga a/b</p>
             <p id="correctNumber">Antal rätt: c</p>
             <p id="wrongNumber">Antal fel: d</p>
         </div>
 
-        <div id="startArea" class="hidden">
-            <p>Välkommen till Quizspelet</p>
-            <p>Regler här...</p>
-            <button>Spela</button>
+        <div id="startArea">
+            <h2>Välkommen till Quizspelet</h2>
+            <h3>Info:</h3>
+            <p>Du kan välja flera svarsalternativ</p>
+            <p>Ibland är mer än ett svar rätt</p>
+            <p>Alla rätta svarsalternativ måste vara markerade för att få rätt</p>
+            <button id="startButton">Starta</button>
         </div>
 
-        <div id="inputArea">
+        <div id="inputArea" class="hidden">
             <p>Namn:</p>
             <input id="playerName" type="text" placeholder="Ange ditt namn">
             <p>Hur många frågor vill du svara på?</p>
-            <input id="noOfQuestions" type="number">
-            <button id="submitInputs">Spela</button>
+            <input id="noOfQuestions" type="text" maxlength="2" placeholder="Minst 1, max 16">
+            
+            <div>
+                <button id="submitInputs">Spela</button>
+            </div>
         </div>
 
         <div id="categoryArea" class="hidden">
-            <p>Välj en kategori</p>
-            <label class="categoryChoice" ><input id="Sport" type="radio" name="radio" value="Sport">Sport</label>
-            <label class="categoryChoice"><input  id="Teknik" type="radio" name="radio" value="Teknik">Teknik</label>
-            <label class="categoryChoice"><input  id="Gaming" type="radio" name="radio" value="Gaming">Gaming</label>
-            <label class="categoryChoice"><input  id="Historia" type="radio" name="radio" value="Historia">Historia</label>
-            <button id="submitCategory">Välj</button>
+            <h3>Välj en kategori</h3>
+
+            <div id="categoryContainer">
+                <label class="categoryChoice"><input id="Sport" type="radio" name="radio" value="Sport">Sport</label>
+                <label class="categoryChoice"><input id="Teknik" type="radio" name="radio" value="Teknik">Teknik</label>
+                <label class="categoryChoice"><input id="Gaming" type="radio" name="radio" value="Gaming">Gaming</label>
+                <label class="categoryChoice"><input id="Historia" type="radio" name="radio" value="Historia">Historia</label>
+            </div>
+
+            <div class="buttons">
+                <button id="submitCategory">Välj</button>
+            </div>
         </div>
 
         <div id="questionArea" class="hidden">
-            <p id="question">Fråga</p>
-            <label class="answer"><input type="checkbox" class="checkbox"><span id="answer0">Svar 1</span><span
-                    class="yourAnswer hidden">Ditt svar</span></label>
-            <label class="answer"><input type="checkbox" class="checkbox"><span id="answer1">Svar 2</span><span
-                    class="yourAnswer hidden">Ditt svar</span></label>
-            <label class="answer"><input type="checkbox" class="checkbox"><span id="answer2">Svar 3</span><span
-                    class="yourAnswer hidden">Ditt svar</span></label>
-            <label class="answer"><input type="checkbox" class="checkbox"><span id="answer3">Svar 4</span><span
-                    class="yourAnswer hidden">Ditt svar</span></label>
-            <button id="submitAnswer">Välj</button>
-            <button id="nextQuestion" class="hidden">Fortsätt</button>
+            <h3 id="question">Fråga</h3>
+
+            <div id="questionContainer">
+                <label class="answer"><input type="checkbox" class="checkbox"><span class="answers" id="answer0">Svar
+                        1</span><span class="yourAnswer hidden">Ditt svar</span></label>
+                <label class="answer"><input type="checkbox" class="checkbox"><span class="answers" id="answer1">Svar
+                        2</span><span class="yourAnswer hidden">Ditt svar</span></label>
+                <label class="answer"><input type="checkbox" class="checkbox"><span class="answers" id="answer2">Svar
+                        3</span><span class="yourAnswer hidden">Ditt svar</span></label>
+                <label class="answer"><input type="checkbox" class="checkbox"><span class="answers" id="answer3">Svar
+                        4</span><span class="yourAnswer hidden">Ditt svar</span></label>
+            </div>
+
+            <div class="buttons">
+                <button id="submitAnswer">Välj</button>
+                <button id="nextQuestion" class="hidden">Fortsätt</button>
+            </div>
         </div>
 
         <div id="resultArea" class="hidden">
-            <p id="resultText">Du svarade rätt på x av y frågor!</p>
-            <button>Spela igen</button>
-            <button>Avsluta</button>
+            <h2 id="resultText">Du svarade rätt på x av y frågor!</h2>
+            <button id="quitButton">Avsluta</button>
         </div>
     </div>
-
 
     <script src="readjson.js"></script>
     <script src="main.js"></script>

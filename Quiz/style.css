@@ -1,3 +1,8 @@
+body {
+    background-color: rgb(31, 31, 31);
+    font-weight: bold;
+}
+
 .checkbox {
     display: none;
 }
@@ -6,62 +11,35 @@ input[name="radio"] {
     display: none;
 }
 
-
 #gameArea {
     margin: auto;
-    width: 35%;
-    background-color: lightblue;
+    width: 50%;
+    height: 700px;
+    background-color: rgb(0, 145, 194);
 }
 
-.disabled {
-    text-decoration: line-through;
-    color: grey;
-}
-/*
-#startArea {
-    display: none;
+#title,
+#stats,
+#question,
+button {
+    text-align: center;
 }
 
-
-#inputArea {
-    display: none;
-}
-
-
-#categoryArea {
-    display: none;
-}
-
-#questionArea {
-    display: none;
-}
-
-#resultArea {
-    display: none;
-}
-*/
-
-.hidden {
-    display: none;
-}
-
-
-
-.answer, .categoryChoice {
+.answer,
+.categoryChoice {
     border: 1px solid black;
-    border-radius: 10px;
-    display: block;
-    margin: 10px;
-    padding: 10px;
-}
-
-.selected {
-    background-color: aqua;
-    border: 1px solid white;
+    background-color: rgb(0, 183, 255);
     border-radius: 10px;
     display: block;
     margin: 10px;
     padding: 15px;
+}
+
+.selected {
+    background-color: rgb(1, 103, 255);
+    border: 1px solid white;
+    border-radius: 10px;
+    display: block;
 }
 
 .wrong {
@@ -84,4 +62,139 @@ input[name="radio"] {
 
 .yourAnswer {
     float: right;
+}
+
+input[type="text"] {
+    border-radius: 10px;
+    padding: 7px;
+}
+
+button {
+    font-weight: bold;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 9px;
+}
+
+#startArea,
+#inputArea,
+#categoryArea,
+#resultArea,
+.buttons {
+    text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+    #gameArea {
+        width: 100%;
+    }
+
+    input[type="text"] {
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    #questionContainer,
+    #categoryContainer {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+    .answer,
+    .categoryChoice {
+        width: 40%;
+    }
+
+    button {
+        padding: 10%;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    #gameArea {
+        width: 100%;
+    }
+
+    input[type="text"] {
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    #questionContainer,
+    #categoryContainer {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+    .answer,
+    .categoryChoice {
+        width: 40%;
+    }
+
+    button {
+        padding: 10%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    #gameArea {
+        width: 100%;
+    }
+
+    input[type="text"] {
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    #questionContainer,
+    #categoryContainer {
+        width: 100%;
+    }
+
+    .answer,
+    .categoryChoice {
+        width: 94%;
+    }
+
+    button {
+        padding: 3%;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    #gameArea {
+        width: 80%;
+    }
+
+    input[type="text"] {
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    #questionContainer,
+    #categoryContainer {
+        width: 100%;
+    }
+
+    .answer,
+    .categoryChoice {
+        width: 93%;
+    }
+
+    button {
+        padding: 1%;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.disabled {
+    text-decoration: line-through;
+    background-color: darkgray !important;
 }

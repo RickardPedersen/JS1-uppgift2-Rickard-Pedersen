@@ -2,7 +2,7 @@
     "Sport": [
    
             {
-                "Question": "Vem vann herrarnas fotbolls-VM 2018 ?",
+                "Question": "Vilket lag vann herrarnas fotbolls-VM 2018?",
                 "Answers" : [
                     {
                         "Alternative": "Frankrike",
@@ -23,14 +23,14 @@
                 ]
             },
             {
-                "Question": "Vilka 2 fotbollslag spelade i Champions-League finalen 2018?",
+                "Question": "Vilka två fotbollslag spelade i Champions-League finalen 2018?",
                 "Answers" : [
                     {
                         "Alternative": "Real Madrid",
                         "Correct" : true
                     },
                     {
-                        "Alternative": "Chelsea", 
+                        "Alternative": "Juventus", 
                         "Correct" : false
                     },
                     {
@@ -38,7 +38,7 @@
                         "Correct" : true
                     },
                     {
-                        "Alternative": "AIK",
+                        "Alternative": "Manchester City",
                         "Correct" : false
                     }        
                 ]  
@@ -99,12 +99,12 @@
                         "Correct" : true
                     },
                     {
-                        "Alternative": "Ljudkompressor",
+                        "Alternative": "Kamrem",
                         "Correct" : false
                     },
                     {
-                        "Alternative": "Ventilationsrör",
-                        "Correct" : true
+                        "Alternative": "Cylinderblock",
+                        "Correct" : false
                     }
                 ]
              },
@@ -120,7 +120,7 @@
                         "Correct" : false
                     },
                     {
-                        "Alternative": "El-Snowboard",
+                        "Alternative": "El-snowboard",
                         "Correct" : false
                     },
                     {
@@ -131,23 +131,23 @@
              },
             
             {
-                "Question": "Hur många Hz tar en vanlig hdmi-kabel?",
+                "Question": "Vilket av dessa programmeringsspråk används mest inom webbutveckling?",
                 "Answers": [
                     {
-                         "Alternative": "35",
+                         "Alternative": "C",
                          "Correct" : false
                     },
                     {
-                        "Alternative": "60", 
-                        "Correct" : true
-                    },
-                    {
-                        "Alternative": "100",
+                        "Alternative": "C++", 
                         "Correct" : false
                     },
                     {
-                        "Alternative": "120",
+                        "Alternative": "Javascript",
                         "Correct" : true
+                    },
+                    {
+                        "Alternative": "Java",
+                        "Correct" : false
                     }
                 ]
             },
@@ -191,24 +191,24 @@
                         "Correct" : false
                     },
                     {
-                        "Alternative": "2013",
+                        "Alternative": "2014",
                         "Correct" : false
                     }
                 ]
             },
             {
-                 "Question": "Vilka 3 items gör itemet 'Infinity Edge' i spelet League of Legends",
+                 "Question": "Vilka tre items gör itemet 'Infinity Edge' i spelet League of Legends",
                 "Answers": [
                     {
                          "Alternative": "Long Sword",
                          "Correct" : false
                     },
                     {
-                        "Alternative": "BF-Sword", 
+                        "Alternative": "B. F. Sword", 
                         "Correct" : true
                     },
                     {
-                        "Alternative": "Pick Axe",
+                        "Alternative": "Pickaxe",
                         "Correct" : true
                     },
                     {
@@ -242,11 +242,11 @@
                  "Question": "Vad för genre är spelet Outlast?",
                 "Answers": [
                     {
-                         "Alternative": "Äventyr",
-                         "Correct" : false
+                         "Alternative": "Överlevnad",
+                         "Correct" : true
                     },
                     {
-                        "Alternative": "Skröck", 
+                        "Alternative": "Skräck", 
                         "Correct" : true
                     },
                     {
@@ -262,14 +262,14 @@
     ],
     "Historia": [
             {
-                "Question": "Vilket år började 2a världskriget?",
+                "Question": "Vilket år började andra världskriget?",
                 "Answers": [
                     {
-                         "Alternative": "1999",
+                         "Alternative": "1942",
                          "Correct" : false
                     },
                     {
-                        "Alternative": "1930", 
+                        "Alternative": "1937", 
                         "Correct" : false
                     },
                     {
@@ -277,71 +277,71 @@
                         "Correct" : true
                     },
                     {
-                        "Alternative": "1920",
+                        "Alternative": "1945",
                         "Correct" : false
                     }
                 ]
             },
             {
-                "Question": "När startade gänget 'Peaky Blinders' som blev en följd av 1sta världskriget?",
+                "Question": "Vilka av dessa personer är före detta svenska kungar?",
                 "Answers": [
                     {
-                         "Alternative": "1921",
+                         "Alternative": "Jan-Ove Waldner",
                          "Correct" : false
                     },
                     {
-                        "Alternative": "1911", 
-                        "Correct" : false
+                        "Alternative": "Gustav II Adolf", 
+                        "Correct" : true
                     },
                     {
-                        "Alternative": "1919",
-                        "Correct" : false
+                        "Alternative": "Karl XIV Johan",
+                        "Correct" : true
                     },
                     {
-                        "Alternative": "1934",
+                        "Alternative": "Adolf Fredrik",
                         "Correct" : true
                     }
                 ]
             },
             {
-                 "Question": "När började och slutade ",
+                 "Question": "Vem höll talet 'I Have a Dream'?",
                 "Answers": [
                     {
-                         "Alternative": "El-båt",
+                         "Alternative": "J. R. R. Tolkien",
                          "Correct" : false
                     },
                     {
-                        "Alternative": "El-skidor", 
-                        "Correct" : false
-                    },
-                    {
-                        "Alternative": "El-Snowboard",
-                        "Correct" : false
-                    },
-                    {
-                        "Alternative": "El-sparkcykel",
+                        "Alternative": "Martin Luther King Jr.", 
                         "Correct" : true
+                    },
+                    {
+                        "Alternative": "George R. R. Martin",
+                        "Correct" : false
+                    },
+                    {
+                        "Alternative": "Martin Luther",
+                        "Correct" : false
                     }
                 ]
             },
             {
-                 "Question": "Vilket år började 2a världskriget?",
+                 "Question": "År 1932 krigade Australien mot en väldigt speciell fiende. Vilken?",
                 "Answers": [
                     {
-                         "Alternative": "1999",
+                         "Alternative": "Emuer",
                          "Correct" : true
                     },
                     {
-                        "Alternative": "El-skidor", 
+                        "Alternative": "Krokodiler", 
                         "Correct" : false
                     },
                     {
-                        "Alternative": "El-Snowboard",
+                        "Alternative": "Ormar",
                         "Correct" : false
                     },
                     {
-                        "Alternative": "El-sparkcykel",
-                        "Correct" : true
+                        "Alternative": "Spindlar",
+                        "Correct" : false
                     }
                 ]
             }

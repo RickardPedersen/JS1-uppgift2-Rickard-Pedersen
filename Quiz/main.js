@@ -1,11 +1,9 @@
-// TODO: alreadyAnswerd. kanske i json? spara hela det "svarade" objektet i Quiz/Question (array)
-// FIXA checkifanswered metoden!!
-
+// DOMcon... utanför classerna?
 document.addEventListener('DOMContentLoaded', (event) => {
 
-
     class Quiz {
-        constructor(playerName = "player", noOfQuestions = 1) {
+        constructor(playerName, noOfQuestions) {
+            this.reset();
             this.playerName = playerName;
             this.noOfQuestions = noOfQuestions;
             this.currentQuestionNumber = 0;
@@ -17,6 +15,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             this.historiaQuestions = [];
             this.arrayOfArrays = [this.sportQuestions, this.teknikQuestions, this.gamingQuestions, this.historiaQuestions]
 
+            // pushes the questions into the correct array.
             for (let i = 0; i < json.Sport.length; i++) {
                 this.sportQuestions.push(json.Sport[i]);
             }
@@ -33,28 +32,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
             this.updateStats();
         }
 
+        // Displays your "stats" on the screen.
         updateStats() {
             document.getElementById("questionNumber").innerHTML = "Fråga " + this.currentQuestionNumber + "/" + this.noOfQuestions;
             document.getElementById("correctNumber").innerHTML = "Antal rätt: " + this.correctAnswers;
             document.getElementById("wrongNumber").innerHTML = "Antal fel: " + this.wrongAnswers;
         }
 
-        //fungerar inte som den ska FIXA
-        //newQuestion.question-värdet uppdateras inte sen den förra frågan
-        /*
-        checkIfAnswered(questionToBeChecked) {
-            for (let i = 0; i < this.alreadyAnswered.length; i++) {
-                if (this.alreadyAnswered[i] == questionToBeChecked) {
-                    newQuestion.getQuestion();
-                    console.log("denna är redan besvarad");
-
-                    //console.log(this.alreadyAnswered[i]);
-                    //console.log(questionToBeChecked);
-
-                }
+        // Unchecks checked radio buttons.
+        reset() {
+            for (let i = 0; i < radioButtons.length; i++) {
+                radioButtons[i].parentNode.classList.remove("disabled")
+                radioButtons[i].disabled = false;
             }
         }
-        */
     }
 
     class Question {
@@ -64,109 +55,36 @@ document.addEventListener('DOMContentLoaded', (event) => {
             this.question;
             this.answers;
             this.checkCategoryChoice();
-            //this.getQuestion();
-            this.getQuestion2(this.category, this.questionArray);
+            this.getQuestion(this.category, this.questionArray);
             this.printQuestion();
 
         }
 
+        // Checks which category the player has chosen.
         checkCategoryChoice() {
-            /*
-            for (radioButton of radioButtons) {
-                if (radioButton.checked == true) {
-                    this.category = radioButton.value;
+            for (let i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked == true) {
+                    this.category = radioButtons[i].value;
+                    this.questionArray = game.arrayOfArrays[i];
                 }
             }
-            */
-           for (let i = 0; i < radioButtons.length; i++) {
-            if (radioButtons[i].checked == true) {
-                this.category = radioButtons[i].value;
-                this.questionArray = game.arrayOfArrays[i];
-            }
-        }
         }
 
-        getQuestion2(id, array) {
+        // Gets a random question from the chosen category array.
+        getQuestion(id, array) {
             let questionIndex = Math.floor(Math.random() * array.length);
-            
-                    this.question = array[questionIndex].Question;
-                    this.answers = array[questionIndex].Answers;
-                    array.splice(questionIndex, 1);
 
-                    if (array.length == 0) {
-                        document.getElementById(id).disabled = true;
-                        document.getElementById(id).parentNode.classList.add("disabled");
-                    }
-        }
+            this.question = array[questionIndex].Question;
+            this.answers = array[questionIndex].Answers;
+            array.splice(questionIndex, 1);
 
-        // används inte längre
-        /*
-        getQuestion() {
-            let questionIndex;
-
-            switch (this.category) {
-                case "Sport":
-                    questionIndex = Math.floor(Math.random() * game.sportQuestions.length);
-                    this.question = game.sportQuestions[questionIndex].Question;
-                    this.answers = game.sportQuestions[questionIndex].Answers;
-                    game.sportQuestions.splice(questionIndex, 1);
-
-                    if (game.sportQuestions.length == 0) {
-                        document.getElementById("sport").disabled = true;
-                        document.getElementById("sport").parentNode.classList.add("disabled");
-                    }
-                    //game.answeredSport++;
-                    break;
-
-                case "Teknik":
-                    questionIndex = Math.floor(Math.random() * game.teknikQuestions.length);
-                    this.question = game.teknikQuestions[questionIndex].Question;
-                    this.answers = game.teknikQuestions[questionIndex].Answers;
-                    game.teknikQuestions.splice(questionIndex, 1);
-
-                    if (game.teknikQuestions.length == 0) {
-                        document.getElementById("sport").disabled = true;
-                        document.getElementById("sport").parentNode.classList.add("disabled");
-                    }
-                    ///game.answeredTeknik++;
-                    break;
-
-                case "Gaming":
-                    questionIndex = Math.floor(Math.random() * game.sportQuestions.length);
-                    this.question = game.sportQuestions[questionIndex].Question;
-                    this.answers = game.sportQuestions[questionIndex].Answers;
-                    game.sportQuestions.splice(questionIndex, 1);
-
-                    if (game.sportQuestions.length == 0) {
-                        document.getElementById("sport").disabled = true;
-                        document.getElementById("sport").parentNode.classList.add("disabled");
-                    }
-                    //game.answeredGaming++;
-                    break;
-
-                case "Historia":
-                    questionIndex = Math.floor(Math.random() * game.sportQuestions.length);
-                    this.question = game.sportQuestions[questionIndex].Question;
-                    this.answers = game.sportQuestions[questionIndex].Answers;
-                    game.sportQuestions.splice(questionIndex, 1);
-
-                    if (game.sportQuestions.length == 0) {
-                        document.getElementById("sport").disabled = true;
-                        document.getElementById("sport").parentNode.classList.add("disabled");
-                    }
-                    //game.answeredHistoria++;
-                    break;
-
-                default:
-                    break;
+            if (array.length == 0) {
+                document.getElementById(id).disabled = true;
+                document.getElementById(id).parentNode.classList.add("disabled");
             }
-            
-
-
         }
-        */
 
-        // This method prints out the question and answers
+        // Prints out the question and answers on the screen.
         printQuestion() {
             document.getElementById("question").innerHTML = this.question;
 
@@ -176,23 +94,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         }
 
+        // Checks if the answers the player has selected are correct.
+        // Compares the checkboxes "checked" boolean with the answers "Correct" boolean.
+        // All booleans must "line up" for the answer to be correct.
         correct(array) {
             for (let i = 0; i < array.length; i++) {
                 if (array[i].checked === this.answers[i].Correct) {
                     if (i == array.length - 1) {
                         game.correctAnswers++;
-                        alert("rätt");
                         break;
                     }
                 } else {
                     game.wrongAnswers++;
-                    alert("fel");
                     break;
                 }
 
             }
         }
 
+        // Shows the player which answers were correct.
         showAnswers() {
             game.updateStats();
             for (let i = 0; i < this.answers.length; i++) {
@@ -202,7 +122,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     document.getElementById("answer" + i).parentNode.classList.add("wrong");
                 }
             }
-            //visa också vad spelaren har svarat typ "ditt svar"
+
             for (let i = 0; i < checkboxes.length; i++) {
                 if (checkboxes[i].checked == true) {
                     document.getElementsByClassName("yourAnswer")[i].classList.remove("hidden");
@@ -210,24 +130,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         }
 
+        // Unchecks any checked checkbox or radio button.
         reset() {
-
             for (let i = 0; i < checkboxes.length; i++) {
                 checkboxes[i].checked = false;
                 checkboxes[i].parentNode.classList.remove("selected", "correct", "wrong");
                 radioButtons[i].checked = false;
-                radioButtons[i].parentNode.classList.remove("selected", "correct", "wrong");
+                radioButtons[i].parentNode.classList.remove("selected");
                 document.getElementsByClassName("yourAnswer")[i].classList.add("hidden");
             }
         }
     }
 
+    // Loads the .json file. The function is in a different .js file.
+    let json = getJSON('my_data.json');
 
-
-
-
+    // This function adds the class ".selected" to the checked radio button.
     let radioButtons = document.getElementsByName("radio");
-    // This function adds the class ".selected" to the checked radiobutton
+
     function selectCategory(event) {
         for (radioButton of radioButtons) {
             if (radioButton.checked == true) {
@@ -238,12 +158,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
+    // Adds event listener to all radio buttons.
     for (radioButton of radioButtons) {
         radioButton.addEventListener("change", selectCategory);
     }
 
+    // This function adds the class ".selected" to all the checked checkboxes.
     let checkboxes = document.getElementsByClassName("checkbox");
-    // This function adds the class ".selected" to the checked checkboxes
+
     function selectAnswer(event) {
         if (event.currentTarget.checked == true) {
             event.currentTarget.parentNode.classList.add("selected");
@@ -252,50 +174,58 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
+    // Adds event listener to all checkboxes.
     for (checkbox of checkboxes) {
         checkbox.addEventListener("change", selectAnswer);
     }
 
+    // Adds event listener for the "Starta" button.
+    document.getElementById("startButton").addEventListener("click", function (event) {
+        document.getElementById("startArea").classList.add("hidden");
+        document.getElementById("inputArea").classList.remove("hidden");
+    });
 
 
-
-
-    let json = getJSON('my_data.json');
-    //console.log(json);
-
-    //document.getElementById("question").innerHTML = json.Gaming[0].Question;
-
-    /*
-    for (let i = 0; i < json.Gaming.length; i++) {
-        document.getElementById("answer" + i).innerHTML = json.Gaming[0].Answers[i].Alternative;
-    }
-    */
-
-
-
-
-
+    // Adds event listener for the "Spela" button. This Starts the game.
     let game;
-    //game = new Quiz("Rickard", 5);
     document.getElementById("submitInputs").addEventListener("click", function (event) {
-        game = new Quiz(document.getElementById("playerName").value, parseInt(document.getElementById("noOfQuestions").value));
 
-        console.log(game);
+        // Function stops if the input fields contain the wrong information.
+        if (document.getElementById("noOfQuestions").value == "" ||
+            document.getElementById("noOfQuestions").value < 1 ||
+            document.getElementById("noOfQuestions").value > 16 ||
+            document.getElementById("playerName").value == "") {
+            return;
+        }
+
+        // Creates the "game" object.
+        game = new Quiz(document.getElementById("playerName").value, parseInt(document.getElementById("noOfQuestions").value));
         document.getElementById("inputArea").classList.add("hidden");
         document.getElementById("categoryArea").classList.remove("hidden");
     });
 
+    // Adds event listener for the "Välj" category button.
     let newQuestion;
     document.getElementById("submitCategory").addEventListener("click", function (event) {
-        newQuestion = new Question();
-        document.getElementById("stats").classList.remove("hidden");
-        game.currentQuestionNumber++;
-        game.updateStats();
-        console.log(newQuestion);
-        document.getElementById("categoryArea").classList.add("hidden");
-        document.getElementById("questionArea").classList.remove("hidden");
+
+        // This loop makes sure the player has selected a category.
+        // You have to select a category to continue.
+        for (let i = 0; i < radioButtons.length; i++) {
+            if (radioButtons[i].checked == true) {
+                newQuestion = new Question();
+                document.getElementById("stats").classList.remove("hidden");
+                game.currentQuestionNumber++;
+                game.updateStats();
+                console.log(newQuestion);
+                document.getElementById("categoryArea").classList.add("hidden");
+                document.getElementById("questionArea").classList.remove("hidden");
+            } else if (i == radioButtons.length - 1) {
+                return;
+            }
+        }
     });
 
+    // Adds event listener for the "Välj" answers button. 
     document.getElementById("submitAnswer").addEventListener("click", function (event) {
         newQuestion.correct(checkboxes);
         newQuestion.showAnswers();
@@ -303,38 +233,38 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("nextQuestion").classList.remove("hidden");
     });
 
+    // Adds event listener for the "Fortsätt" button.
     document.getElementById("nextQuestion").addEventListener("click", function (event) {
-        //console.log(game.correctAnswers + game.wrongAnswers);
-        //console.log(game.noOfQuestions);
         newQuestion.reset();
         document.getElementById("questionArea").classList.add("hidden");
         document.getElementById("submitAnswer").classList.remove("hidden");
         document.getElementById("nextQuestion").classList.add("hidden");
+
+        // Checks if all the questions has been answered.
         if (game.currentQuestionNumber == game.noOfQuestions) {
             document.getElementById("resultArea").classList.remove("hidden");
-            document.getElementById("resultText").innerHTML = "Du svarade rätt på " + game.correctAnswers + " av " + game.noOfQuestions + " frågor!";
+            document.getElementById("stats").classList.add("hidden");
+            document.getElementById("resultText").innerHTML = game.playerName + " svarade rätt på " + game.correctAnswers + " av " + game.noOfQuestions + " frågor!";
         } else {
-            //newQuestion = new Question();
-            /*
-            if (game.answeredSport == json.Sport.length) {
-                document.getElementById("sport").disabled = true;
-            }
-            if (game.answeredSport == json.Sport.length) {
-                document.getElementById("teknik").disabled = true;
-            }
-            if (game.answeredSport == json.Sport.length) {
-                document.getElementById("gaming").disabled = true;
-            }
-            if (game.answeredSport == json.Sport.length) {
-                document.getElementById("historia").disabled = true;
-            }
-
-            */
             document.getElementById("categoryArea").classList.remove("hidden");
 
         }
     });
 
-    //document.getElementById("sport").disabled = true;
+    // Adds event listener for the "Avsulta button".
+    document.getElementById("quitButton").addEventListener("click", function () {
+        document.getElementById("resultArea").classList.add("hidden");
+        document.getElementById("startArea").classList.remove("hidden");
+    });
+
+    // Makes it impossible to enter anything other then numbers in the noOfQuestions input.
+    document.getElementById("noOfQuestions").oninput = function () {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    }
+
+    // Makes it impossible to enter anything other then letters in the playerName input.
+    document.getElementById("playerName").oninput = function () {
+        this.value = this.value.replace(/[^a-öA-Ö]/g, '');
+    }
 
 });
